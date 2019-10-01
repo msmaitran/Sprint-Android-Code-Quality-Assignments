@@ -1,11 +1,6 @@
 package com.lambdaschool.sprintchallenge3_pokeapi
 
-import android.graphics.Bitmap
-import org.json.JSONException
-import org.json.JSONObject
-
 import java.io.Serializable
-import java.util.ArrayList
 
 data class JSONPokemon (
         val name: String,

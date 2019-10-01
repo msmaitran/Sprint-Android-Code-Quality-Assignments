@@ -14,12 +14,12 @@ object PokemonDao {
     interface PokemonAPI {
 
         @GET("pokemon/{name-id}")
-        fun getPokemon(@Path("name-id") nameOrId: String) : Call<Pokemon>
+        fun getPokemon(@Path("name-id") nameOrId: String) : Call<JSONPokemon>
     }
 
     private val POKEMON_URL = "https://pokeapi.co/api/v2/pokemon/%s/" // add pokemon name as
 
-    fun getPokemon(name: String): Call<Pokemon> {
+    fun getPokemon(name: String): Call<JSONPokemon> {
         val logger = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BASIC
             level = HttpLoggingInterceptor.Level.BODY
