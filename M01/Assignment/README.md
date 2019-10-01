@@ -17,64 +17,64 @@ As a recap, the project when working properly should:
 
 1. Error running 'app': Default Activity not found
   
-  a) Add MainActivity as LAUNCHER activity in AndroidManifest.xml
+- Add MainActivity as LAUNCHER activity in AndroidManifest.xml
   
-  b) Add EditActivity in AndroidManifest.xml
+- Add EditActivity in AndroidManifest.xml
   
-  c) Add SettingsActivity in AndroidManifest.xml
+- Add SettingsActivity in AndroidManifest.xml
   
 2. Android resource linking failed
   
-  a) MainActivity: update tools:context="com.lambdaschool.notetaker.MainActivity" in the activity_main.xml file
+- MainActivity: update tools:context="com.lambdaschool.notetaker.MainActivity" in the activity_main.xml file
   
-  b) Implement constraintlayout dependency in gradle file
+- Implement constraintlayout dependency in gradle file
   
-  c) Update recyclerview in the activity_main.xml file
+- Update recyclerview in the activity_main.xml file
   
 3. Vector drawables missing
   
-  a) Add (3) vector drawables for pref_headers
+- Add (3) vector drawables for pref_headers
 
 4. e: [kapt] An exception occurred:java.util.NoSuchElementException:Collection contains no element matching the predicate.
   
-  a) comment out private set on line 20 of file Note.kt
+- comment out private set on line 20 of file Note.kt
   
-  b) comment out constructor(id: Long) {this.id = id} on lines 57-58 of file Note.kt
+- comment out constructor(id: Long) {this.id = id} on lines 57-58 of file Note.kt
   
 5. NoteViewModel: No value passed for parameter 'context'
   
-  a) Add parameter: context
+- Add parameter: context
 
 6. NotesDBDao: Unresolved reference: getId
   
-  a) Change note.getId() to note.id
+- Change note.getId() to note.id
   
 7. SharedPrefsDao: Unresolved reference: getId
   
-  a) Change note.getId() to note.id.toString()
+- Change note.getId() to note.id.toString()
   
-  b) Change note.setId(nextId) to note.id = nextId.toLong()
+- Change note.setId(nextId) to note.id = nextId.toLong()
   
 8. NotesDBHelper.kt: 7
   
-  a) Change DATABASE_VERSION from 0 to 1
+- Change DATABASE_VERSION from 0 to 1
   
 9. EditActivity.kt: 19
   
-  a) EditActivity: update tools:context="com.lambdaschool.notetaker.EditActivity" in the activity_edit.xml file
-  
-  b) Update constraintlayout in the activity_edit.xml file
+- EditActivity: update tools:context="com.lambdaschool.notetaker.EditActivity" in the activity_edit.xml file
+
+- Update constraintlayout in the activity_edit.xml file
 
 10. EditActivity: Null cannot be cast to non-null type
   
-  a) Change "as Note" to "as Note?"
+- Change "as Note" to "as Note?"
   
 11. Title not displaying on note_element_layout
   
-  a) Add var noteTitle under class ViewHolder
+- Add var noteTitle under class ViewHolder
   
-  b) Add noteTitle under init
+- Add noteTitle under init
   
-  c) Add noteTitle under onBindViewHolder
+- Add noteTitle under onBindViewHolder
   
 12. ...still more bugs
