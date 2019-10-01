@@ -31,11 +31,14 @@ dependencies {
 
     // Retrofit2
     implementation "com.squareup.retrofit2:retrofit:2.6.1"
-    implementation "com.squareup.retrofit2:converter-gson:2.6.1"
+    implementation "com.squareup.retrofit2:converter-moshi:2.6.1"
 
     // OkHttp
     api "com.squareup.okhttp3:okhttp:4.1.1"
     implementation "com.squareup.okhttp3:logging-interceptor:4.1.1"
+
+    // Moshi
+    implementation 'com.squareup.moshi:moshi:1.8.0'
 }
 repositories {
     mavenCentral()
