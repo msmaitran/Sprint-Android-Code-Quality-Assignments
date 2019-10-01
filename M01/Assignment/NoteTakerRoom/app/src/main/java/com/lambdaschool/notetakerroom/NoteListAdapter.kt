@@ -16,11 +16,13 @@ class NoteListAdapter internal constructor(private val dataList: ArrayList<Note>
     private var context: Context? = null
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var noteTitle: TextView
         var noteContent: TextView
         var parentView: ViewGroup
 
         init {
 
+            noteTitle = itemView.findViewById(R.id.note_element_title)
             noteContent = itemView.findViewById(R.id.note_element_content)
             parentView = itemView.findViewById(R.id.note_element_parent_layout)
         }
@@ -45,6 +47,7 @@ class NoteListAdapter internal constructor(private val dataList: ArrayList<Note>
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         val data = dataList[i]
 
+        viewHolder.noteTitle.text = data.title
         viewHolder.noteContent.text = data.content
         viewHolder.parentView.setOnClickListener {
             val intent = Intent(context, EditActivity::class.java)
