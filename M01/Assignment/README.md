@@ -15,7 +15,7 @@ As a recap, the project when working properly should:
 
 ## Following Bugs Were Fixed:
 
-1. Error running 'app': Default Activity not found
+**1. Error running 'app': Default Activity not found**
   
 - Add MainActivity as LAUNCHER activity in AndroidManifest.xml
   
@@ -23,7 +23,7 @@ As a recap, the project when working properly should:
   
 - Add SettingsActivity in AndroidManifest.xml
   
-2. Android resource linking failed
+**2. Android resource linking failed**
   
 - MainActivity: update tools:context="com.lambdaschool.notetaker.MainActivity" in the activity_main.xml file
   
@@ -31,45 +31,45 @@ As a recap, the project when working properly should:
   
 - Update recyclerview in the activity_main.xml file
   
-3. Vector drawables missing
+**3. Vector drawables missing**
   
 - Add (3) vector drawables for pref_headers
 
-4. e: [kapt] An exception occurred:java.util.NoSuchElementException:Collection contains no element matching the predicate.
+**4. e: [kapt] An exception occurred:java.util.NoSuchElementException:Collection contains no element matching the predicate.**
   
 - comment out private set on line 20 of file Note.kt
   
 - comment out constructor(id: Long) {this.id = id} on lines 57-58 of file Note.kt
   
-5. NoteViewModel: No value passed for parameter 'context'
+**5. NoteViewModel: No value passed for parameter 'context'**
   
 - Add parameter: context
 
-6. NotesDBDao: Unresolved reference: getId
+**6. NotesDBDao: Unresolved reference: getId**
   
 - Change note.getId() to note.id
   
-7. SharedPrefsDao: Unresolved reference: getId
+**7. SharedPrefsDao: Unresolved reference: getId**
   
 - Change note.getId() to note.id.toString()
   
 - Change note.setId(nextId) to note.id = nextId.toLong()
   
-8. NotesDBHelper.kt: 7
+**8. NotesDBHelper.kt: 7**
   
 - Change DATABASE_VERSION from 0 to 1
   
-9. EditActivity.kt: 19
+**9. EditActivity.kt: 19**
   
 - EditActivity: update tools:context="com.lambdaschool.notetaker.EditActivity" in the activity_edit.xml file
 
 - Update constraintlayout in the activity_edit.xml file
 
-10. EditActivity: Null cannot be cast to non-null type
+**10. EditActivity: Null cannot be cast to non-null type**
   
 - Change "as Note" to "as Note?"
   
-11. Title not displaying on note_element_layout
+**11. Title not displaying on note_element_layout**
   
 - Add var noteTitle under class ViewHolder
   
@@ -77,4 +77,4 @@ As a recap, the project when working properly should:
   
 - Add noteTitle under onBindViewHolder
   
-12. ...still more bugs
+**12. ...still more bugs**
