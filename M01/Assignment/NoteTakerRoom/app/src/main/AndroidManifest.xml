@@ -15,5 +15,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.lambdaschool.notetaker.EditActivity"/>
+        <activity android:name="com.lambdaschool.notetaker.SettingsActivity"/>
     </application>
 </manifest>
