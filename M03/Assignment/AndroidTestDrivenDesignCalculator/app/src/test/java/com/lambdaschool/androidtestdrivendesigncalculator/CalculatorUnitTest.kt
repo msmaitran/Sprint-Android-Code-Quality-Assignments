@@ -17,9 +17,9 @@ class CalculatorUnitTest {
     @Test
     fun calculatorFactorial() {
         // Setup
-        val num1 = 2L
-        val num2 = 5L
-        val expected = 29L
+        val num1 = 2
+        val num2 = 4
+        val expected = 20
         `when`(math.squaresSum(num1, num2)).thenReturn(expected)
 
         // Execute
@@ -32,9 +32,9 @@ class CalculatorUnitTest {
     @Test
     fun calculatorDifference() {
         // Setup
-        val num1 = 5L
-        val num2 = 10L
-        val expected = 5L
+        val num1 = 2
+        val num2 = 10
+        val expected = 8
         `when`(math.absoluteDifference(num1, num2)).thenReturn(expected)
 
         // Execute

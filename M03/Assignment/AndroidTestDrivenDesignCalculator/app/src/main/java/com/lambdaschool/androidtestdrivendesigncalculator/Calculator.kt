@@ -4,12 +4,12 @@ package com.lambdaschool.androidtestdrivendesigncalculator
 class Calculator(private val math: Math) {
 
     // The first function should be named factorial that accepts one parameter that calls the corresponding function in the Math class.
-    fun factorial(num1: Long, num2: Long): Long {
+    fun factorial(num1: Int, num2: Int): Int {
         return math.squaresSum(num1, num2)
     }
 
     // The second function should be named difference that accepts two parameters that calls the corresponding function in the Math class.
-    fun difference(num1: Long, num2: Long): Long {
+    fun difference(num1: Int, num2: Int): Int {
         return math.absoluteDifference(num1, num2)
     }
 }
