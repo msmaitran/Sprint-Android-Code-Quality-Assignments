@@ -1,5 +1,6 @@
 package com.lambdaschool.sprintchallenge3_pokeapi
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -24,6 +25,7 @@ interface PokemonAPI {
             }
 
             val okHttpClient = OkHttpClient.Builder()
+                    .addNetworkInterceptor(StethoInterceptor())
                     .addInterceptor(logger)
                     .retryOnConnectionFailure(false)
                     .readTimeout(10, TimeUnit.SECONDS)
