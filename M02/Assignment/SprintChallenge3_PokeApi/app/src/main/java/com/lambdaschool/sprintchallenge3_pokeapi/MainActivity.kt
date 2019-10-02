@@ -1,8 +1,10 @@
 package com.lambdaschool.sprintchallenge3_pokeapi
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.lambdaschool.sprintchallenge3_pokeapi.Constants.POKEMON_INTENT_KEY
@@ -73,6 +75,12 @@ class MainActivity : AppCompatActivity(), Callback<JSONPokemon> {
         search_button.setOnClickListener {
             val pokemonText = search_bar.text.toString()
             searchPokemon(pokemonText)
+
+            AlertDialog.Builder(this)
+                    .setTitle("Notifiation")
+                    .setMessage("Pokemon was added to the list.")
+                    .setNeutralButton("Ok", DialogInterface.OnClickListener { dialog, which -> dialog.dismiss() })
+                    .show()
         }
     }
 }
