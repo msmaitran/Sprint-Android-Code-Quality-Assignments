@@ -35,7 +35,7 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    // Testing-only dependencies
+    // Add for Espresso
     testImplementation "androidx.test.ext:junit:1.1.1"
     testImplementation "androidx.test.ext:truth:1.2.0"
     testImplementation "org.robolectric:robolectric:4.3"
