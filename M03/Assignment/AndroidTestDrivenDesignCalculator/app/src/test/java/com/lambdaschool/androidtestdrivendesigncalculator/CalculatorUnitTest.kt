@@ -4,7 +4,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.mock
-import kotlin.test.expect
 
 class CalculatorUnitTest {
 
@@ -15,22 +14,22 @@ class CalculatorUnitTest {
     private val calculator = Calculator(math)
 
     @Test
-    fun calculatorFactorial() {
+    fun calculatorSumSquares() {
         // Setup
         val num1 = 2
         val num2 = 4
         val expected = 20
-        `when`(math.squaresSum(num1, num2)).thenReturn(expected)
+        `when`(math.sumofSquares(num1, num2)).thenReturn(expected)
 
         // Execute
-        val squaresSum = calculator.factorial(num1, num2)
+        val sumSquares = calculator.sumSquares(num1, num2)
 
         // Check
-        assertEquals(expected, squaresSum)
+        assertEquals(expected, sumSquares)
     }
 
     @Test
-    fun calculatorDifference() {
+    fun calculatorAbsoluteDifference() {
         // Setup
         val num1 = 2
         val num2 = 10
@@ -38,10 +37,23 @@ class CalculatorUnitTest {
         `when`(math.absoluteDifference(num1, num2)).thenReturn(expected)
 
         // Execute
-        val absoluteDifference = calculator.difference(num1, num2)
+        val absoluteDifference = calculator.absoluteDifference(num1, num2)
 
         // Check
         assertEquals(expected, absoluteDifference)
     }
 
+    @Test
+    fun calculatorFactorial() {
+        // Setup
+        val num1 = 4
+        val expected = 24
+        `when`(math.factorial(num1)).thenReturn(expected)
+
+        // Execute
+        val factorial = calculator.factorial(num1)
+
+        // Check
+        assertEquals(expected, factorial)
+    }
 }
