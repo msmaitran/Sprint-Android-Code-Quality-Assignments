@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android UI Testing Calculator</string>
+    <string name="result">Result:</string>
+    <string name="integers">Integers:</string>
+    <string name="num1">num1</string>
+    <string name="num2">num2</string>
+    <string name="squaressum">Sum of Squares</string>
+    <string name="absolute_difference">Absolute Difference</string>
+    <string name="factorial">factorial</string>
+</resources>
